@@ -412,15 +412,17 @@ top: -8px;
 }
 
 .work-item .overlay a {
+  background-color: #c50c14;
   border: 1px solid #fff;
-  border-radius: 50%;
   display: inline-block;
   margin-top: 20%;
   padding: 7px 10px;
 }
 
 .work-item .overlay a:hover {
-  color: #fff;
+  background-color: #c0392b;
+  color: #eee;
+
 }
 
 .work-item .overlay h4 {
