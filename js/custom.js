@@ -34,12 +34,14 @@ $(document).ready(function(){
         if ($(window).scrollTop() > 400) {
             $("#navigation").css("background-color","#fff");
             $("#logo img").attr("src","img/logo-blue.png");
-            $("#nav a").css("color","#ED1B24");
+            if($(window).width() > 767)
+                $("#nav a").css("color","#ED1B24");
             $(".menu-boton").css("color","#ED1B24");
         } else {
             $("#navigation").css("background-color","rgba(3, 3, 3, 0.8)");
             $("#logo img").attr("src","img/logo.png");
-            $("#nav a").css("color","#FFF");
+            if($(window).width() > 767)
+                $("#nav a").css("color","#FFF");
             $(".menu-boton").css("color","#FFF");
         }
     });

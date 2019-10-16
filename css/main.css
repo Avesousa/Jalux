@@ -41,7 +41,7 @@ a, a:focus, a:hover {
 }
 
 a:focus, a:hover {
-    color: #6CB670;
+    color: #c50c14;
 }
 
 h1, h2, h3,
@@ -68,12 +68,35 @@ span.color {
 	color: #D81414;
 }
 
+.color {
+	color: #D81414;
+}
+
+
+span.resaltador{
+  background-color: white;
+  color: #D81414;
+  padding: 2px;
+  font-weight: 600;
+  margin-top: 2px;
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+}
+
+span.resaltador:hover{
+  background-color: #D81414;
+  color: white;
+}
+
 body > section,
 .footer {
 	padding: 70px 0;
 }
 
-.sec-title {}
+#marcas{
+  padding: 20px;
+}
 
 .sec-title h2 {
   color: #ed1b24;
@@ -153,6 +176,8 @@ body > section,
 			transition: background-color 800ms linear;
 }
 
+
+
 .navbar-toggle i {
   color: #fff;
   margin-top: 15px;
@@ -161,6 +186,8 @@ body > section,
 .navbar-brand {
   padding: 0;
 }
+
+
 
 .navbar-nav li a {
   border-top: 5px solid transparent;
@@ -173,11 +200,8 @@ body > section,
 .navbar-nav li a:hover {
 	background-color: transparent;
 	border-top: 5px solid rgb(237, 27, 26);
-	color: #fff;
+  color: #fff;
 }
-
-
-
 
 /*=========================================
 	Slider
@@ -197,6 +221,15 @@ body > section,
 
 .carousel-caption h2 {
   font-size: 62px;
+  font-weight: 300;
+}
+
+.carousel-caption h1 {
+  font-size: 72px;
+  font-weight: 800;
+}
+
+.carousel-caption h1 span {
   font-weight: 300;
 }
 
@@ -333,6 +366,19 @@ top: -8px;
 	Our Works
 ==========================================*/
 
+.scrollhorizontal{
+  overflow-y: hidden;
+  white-space: nowrap;
+  display: flex;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  height: 150px;
+}
+
+.seccion-lista{
+  height: 400px;
+}
+
 .work-filter {
   margin-bottom: 35px;
 }
@@ -353,7 +399,7 @@ top: -8px;
 
 .work-filter ul li a:hover,
 .work-filter ul li a.active {
-  background-color: #0eb493;
+  background-color: #c50c14;
   border-radius: 6px;
   color: #fff;
   padding: 5px 17px;
@@ -363,10 +409,11 @@ top: -8px;
     display: none;
 }
 
-.work-item {
-    float: left;
-    width: 25%;
-    position: relative;
+figure{
+  float: left;
+  width: 10%;
+  position: relative;
+  flex: 0 0 auto;
 }
 
 .work-item > img {
@@ -411,28 +458,32 @@ top: -8px;
 		    transform: rotateY(0deg) scale(1,1);
 }
 
-.work-item .overlay a {
+.capturador .overlay a {
   background-color: #c50c14;
   border: 1px solid #fff;
   display: inline-block;
-  margin-top: 20%;
   padding: 7px 10px;
+  margin-top: 5px;
 }
 
-.work-item .overlay a:hover {
+.capturador .overlay a:first-child{
+  margin-top: 20%;
+}
+
+.capturador .overlay a:hover {
   background-color: #c0392b;
   color: #eee;
 
 }
 
-.work-item .overlay h4 {
+.capturador .overlay h4 {
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
   margin: 25px 0 8px;
 }
 
-.work-item .overlay p {
+.capturador .overlay p {
   font-size: 14px;
   line-height: 24px;
 }
@@ -440,28 +491,33 @@ top: -8px;
 
 
 /*=========================================
-	Our Team Member
+	Listas
 ==========================================*/
 
-.member-thumb {
+.lista-objeto {
   width: 273px;
   position: relative;
+  margin: 0 auto;
 }
 
-.member-thumb .overlay h5 {
+.lista-objeto .overlay h5 {
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
   margin: 10px 0;
 }
 
-.member-thumb .overlay {
+.lista-objeto .overlay {
 	font-size: 16px;
 	padding: 20px;
 	line-height: 24px;
 }
 
-.team-member h4 {
+.contenedor-lista{
+  margin-left: 30px;
+}
+
+.contenedor-lista h4 {
   color: #062033;
   font-size: 18px;
   font-weight: 600;
@@ -469,7 +525,7 @@ top: -8px;
   margin: 15px 0 8px;
 }
 
-.member-thumb:hover .overlay {
+.lista-objeto:hover .overlay {
 	cursor: pointer;
 	opacity: 1;
 	filter: alpha(opacity=100);
@@ -481,15 +537,15 @@ top: -8px;
 		    transform: rotateY(0deg) scale(1,1);
 }
 
-.team-member:hover h4 {
+.contenedor-lista:hover h4 {
   color: #ed1b24;
 }
 
-.team-member .social-links {
+.contenedor-lista .social-links {
   margin-top: 24%;
 }
 
-.team-member .social-links li a {
+.contenedor-lista .social-links li a {
   background-color: #ed1b24;
   color: #fff;
   height: 42px;
@@ -502,7 +558,7 @@ top: -8px;
 	Some fun facts
 ==========================================*/
 
-#facts {
+#trayectoria {
   background-image: linear-gradient(
     rgba(6,32,51,0.8),
     rgba(6,32,51,0.8)),
@@ -643,7 +699,11 @@ label.error {
   margin-bottom: 10px;
 }
 
-#map_canvas {
+.footer-social li a:hover{
+  color: #c50c14;
+}
+
+.mapa {
   height: 215px;
   width: 100%;
 }
@@ -656,7 +716,7 @@ label.error {
 
 
 .footer {
-  background-color: #c50c14;
+  background-color: #fa2832;
   border-top: 5px solid #062033;
   color: #fff;
 }
@@ -732,8 +792,25 @@ label.error {
   position: fixed;
   right: 25px;
   z-index: 9;
+  color: #062033;
+}
+#whatsapp{
+  bottom: 20px;
+  position: fixed;
+  right: 60px;
+  z-index: 9;
+  color: #48FF20;
+  -webkit-box-shadow: 0px 0px 15px 5px rgba (0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 15px 5px rgba (0,0,0,0.75);
+  box-shadow: 0px 0px 15px 5px rgba (0,0,0,0.75);
 }
 
 .container{
   height: 100%;
+}
+
+.titulo-slider{
+  font-size: 62px;
+  font-weight: 800;
+  color: #D81414;
 }

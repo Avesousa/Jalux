@@ -34,6 +34,10 @@
   font-size: 55px;
 }
 
+.titulo-slider{
+  font-size: 55px;
+}
+
 .carousel-caption h3 {
   font-size: 36px;
 }
@@ -62,7 +66,7 @@
 /* works */
 
 .work-item {
-  width: 33%;
+  width: 15%;
 }
 
 /* team */
@@ -115,6 +119,27 @@ background-position: center top !important;
 /*============================================================
 	Mobile (Portrait) Design for a width of 320px
 ==============================================================*/
+@media only screen and (max-width: 992px){
+  #navigation ul{
+    background-color: rgba(3, 3, 3, 0.8);
+    text-align: center;
+  }
+  
+  .navbar-nav li a{
+    border: none;
+    color: white;
+  }
+  
+  .current{
+    border: none;
+  }
+  .navbar-nav li a.current,
+  .navbar-nav li a:hover {
+    background-color: rgba(141, 6, 6,0.8); 
+    color: rgb(252, 112, 112);
+    border: none;
+  }
+}
 
 @media only screen and (max-width: 767px) {
 
@@ -124,6 +149,10 @@ background-position: center top !important;
 
 /* slider */
 .carousel-caption h2 {
+  font-size: 35px;
+}
+
+.titulo-slider{
   font-size: 35px;
 }
 
@@ -164,7 +193,7 @@ background-position: center top !important;
 
 .work-item {
   left: 5% !important;
-  width: 90%;
+  width: 30%;
 }
 
 /* team */
@@ -250,7 +279,7 @@ background-position: center top !important;
 
 .work-item {
   left: inherit !important;
-  width: 50%;
+  width: 25%;
 }
 
 }
